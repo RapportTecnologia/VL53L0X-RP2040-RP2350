@@ -72,15 +72,31 @@ uint8_t I2C::endTransmission(void) {
 
 
 uint8_t I2C::requestFrom(uint8_t address, size_t quantity) {
+    // Clamp quantity to the size of the buffer
     if (quantity > sizeof(_rxBuffer)) {
         quantity = sizeof(_rxBuffer);
     }
-    int bytes_read = i2c_read_blocking(_i2c, address, _rxBuffer, quantity, false);
-    if (bytes_read < 0) {
-        _rxBufferLength = 0;
-        return 0;
+
+    // If there's anything in the transmit buffer, send it first.
+    // This is typical for setting a register address before reading.
+    if (_txBufferLength > 0) {
+        int ret = i2c_write_blocking(_i2c, address, _txBuffer, _txBufferLength, true); // nostop = true
+        if (ret < _txBufferLength) {
+            // Error during write, abort
+            _rxBufferLength = 0;
+            _rxBufferIndex = 0;
+            return 0;
+        }
     }
-    _rxBufferLength = bytes_read;
+
+    // Now, read the data
+    int bytes_read = i2c_read_blocking(_i2c, address, _rxBuffer, quantity, false);
+
+    if (bytes_read < 0) {
+        _rxBufferLength = 0; // Error
+    } else {
+        _rxBufferLength = bytes_read;
+    }
     _rxBufferIndex = 0;
     return _rxBufferLength;
 }

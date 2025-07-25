@@ -58,10 +58,13 @@ void VL53L0X::setAddress(uint8_t new_addr)
 // enough unless a cover glass is added.
 // If io_2v8 (optional) is true or not given, the sensor is configured for 2V8
 // mode.
+#include <stdio.h>
 bool VL53L0X::init(bool io_2v8)
 {
+  printf("\n[VL53L0X DEBUG] Starting init...\n");
   // check model ID register (value specified in datasheet)
-  if (readReg(IDENTIFICATION_MODEL_ID) != 0xEE) { return false; }
+  if (readReg(IDENTIFICATION_MODEL_ID) != 0xEE) { printf("[VL53L0X DEBUG] Model ID check failed.\n"); return false; }
+  printf("[VL53L0X DEBUG] Model ID check passed.\n");
 
   // VL53L0X_DataInit() begin
 
@@ -97,7 +100,9 @@ bool VL53L0X::init(bool io_2v8)
 
   uint8_t spad_count;
   bool spad_type_is_aperture;
-  if (!getSpadInfo(&spad_count, &spad_type_is_aperture)) { return false; }
+  printf("[VL53L0X DEBUG] Getting SPAD info...\n");
+  if (!getSpadInfo(&spad_count, &spad_type_is_aperture)) { printf("[VL53L0X DEBUG] getSpadInfo failed.\n"); return false; }
+  printf("[VL53L0X DEBUG] getSpadInfo passed.\n");
 
   // The SPAD map (RefGoodSpadMap) is read by VL53L0X_get_info_from_device() in
   // the API, but the same data seems to be more easily readable from
@@ -263,14 +268,18 @@ bool VL53L0X::init(bool io_2v8)
   // -- VL53L0X_perform_vhv_calibration() begin
 
   writeReg(SYSTEM_SEQUENCE_CONFIG, 0x01);
-  if (!performSingleRefCalibration(0x40)) { return false; }
+  printf("[VL53L0X DEBUG] Performing first ref calibration...\n");
+  if (!performSingleRefCalibration(0x40)) { printf("[VL53L0X DEBUG] First ref calibration failed.\n"); return false; }
+  printf("[VL53L0X DEBUG] First ref calibration passed.\n");
 
   // -- VL53L0X_perform_vhv_calibration() end
 
   // -- VL53L0X_perform_phase_calibration() begin
 
   writeReg(SYSTEM_SEQUENCE_CONFIG, 0x02);
-  if (!performSingleRefCalibration(0x00)) { return false; }
+  printf("[VL53L0X DEBUG] Performing second ref calibration...\n");
+  if (!performSingleRefCalibration(0x00)) { printf("[VL53L0X DEBUG] Second ref calibration failed.\n"); return false; }
+  printf("[VL53L0X DEBUG] Second ref calibration passed.\n");
 
   // -- VL53L0X_perform_phase_calibration() end
 

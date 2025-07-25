@@ -3,6 +3,8 @@
 
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
+#include <cstddef>
+#include <cstdint>
 
 class I2C {
 public:

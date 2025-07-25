@@ -1,3 +1,17 @@
+# == DO NOT EDIT THE FOLLOWING LINES for the Raspberry Pi Pico VS Code Extension to work ==
+if(WIN32)
+    set(USERHOME $ENV{USERPROFILE})
+else()
+    set(USERHOME $ENV{HOME})
+endif()
+set(sdkVersion 2.1.1)
+set(toolchainVersion 14_2_Rel1)
+set(picotoolVersion 2.1.1)
+set(picoVscode ${USERHOME}/.pico-sdk/cmake/pico-vscode.cmake)
+if (EXISTS ${picoVscode})
+    include(${picoVscode})
+endif()
+# ====================================================================================
 cmake_minimum_required(VERSION 3.13)
 
 # Option to select the build target
@@ -67,6 +81,7 @@ else()
     add_executable(run_tests
         test/test_main.cpp
         test/unity/unity.c
+        test/pico_sdk_mocks.cpp # Mock implementations
         I2C/I2C.cpp
         vl53l0x/VL53L0X.cpp
     )
@@ -79,6 +94,10 @@ else()
         ${CMAKE_CURRENT_SOURCE_DIR}/I2C
     )
 
+
     add_test(NAME unit_tests COMMAND run_tests)
+
+    # Make test output verbose on failure
+    set(CTEST_OUTPUT_ON_FAILURE TRUE)
 
 endif()
