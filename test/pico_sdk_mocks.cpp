@@ -22,25 +22,24 @@ int i2c_write_blocking(i2c_inst_t *i2c, uint8_t addr, const uint8_t *src, size_t
     if (len == 0) return PICO_ERROR_GENERIC;
     i2c_mock.last_addr = addr;
 
-    // A write with nostop=true is just setting the register for a subsequent read.
-    if (nostop) {
-        if (len == 1) {
-            i2c_mock.last_reg_addr = src[0];
-            return 1; // Report 1 byte written (the address)
-        }
-    } 
-    
-    // This is a normal write transaction (or the write part of a write-then-read).
     uint8_t reg_addr = src[0];
-    i2c_mock.last_reg_addr = reg_addr; // Always update last_reg_addr
+    i2c_mock.last_reg_addr = reg_addr;
+
+    if (nostop) {
+        return len;
+    }
 
     if (len > 1) {
-        // Copy the data (all bytes after the address) into the mock register map.
         for (size_t i = 0; i < len - 1; ++i) {
             i2c_mock.registers[reg_addr + i] = src[i + 1];
         }
     }
-    return len; // Report all bytes written
+
+    if (reg_addr == 0x83 && len > 1 && src[1] == 0x00) {
+        i2c_mock.registers[0x83] = 0x01;
+    }
+
+    return len;
 }
 
 int i2c_read_blocking(i2c_inst_t *i2c, uint8_t addr, uint8_t *dst, size_t len, bool nostop) {

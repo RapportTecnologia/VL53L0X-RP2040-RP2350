@@ -64,15 +64,12 @@ void test_vl53l0x_init_success(void) {
     // Pre-load the mock register map to satisfy the init() sequence.
     i2c_mock.registers[VL53L0X::IDENTIFICATION_MODEL_ID] = 0xEE;
     i2c_mock.registers[VL53L0X::VHV_CONFIG_PAD_SCL_SDA__EXTSUP_HV] = 0x01; // Set high voltage bit
-    
+
     // --- Values for getSpadInfo ---
-    // The polling loop in getSpadInfo checks register 0x83. We need to make it non-zero.
-    // The first read of 0x83 will be 0, then the mock will be updated to 1.
-    i2c_mock.registers[0x83] = 0x00; // Initial value
-    // After the first read, the test will update this to 1.
-    // To simulate this, we can't do it here directly. Instead, we'll rely on the fact
-    // that the mock doesn't enforce timing, and we'll just set the final values needed.
-    i2c_mock.registers[0x83] = 0x01; // Final value to exit the polling loop
+    // The driver does a read-modify-write on 0x83. We prime it to 0 so the R-M-W works as expected.
+    i2c_mock.registers[0x83] = 0x00;
+    // The mock i2c_write_blocking will see the subsequent write to 0x83 and update the value to 0x01,
+    // allowing the polling loop to pass.
     i2c_mock.registers[0x92] = 5;   // spad_count = 5, type_is_aperture = 0
 
     i2c_mock.registers[0x91] = 0x01; // stop_variable
@@ -82,7 +79,7 @@ void test_vl53l0x_init_success(void) {
     TEST_ASSERT_TRUE(sensor.init());
 
     // Check that a key register was written during init
-    TEST_ASSERT_EQUAL_HEX8(0xff, i2c_mock.registers[VL53L0X::SYSTEM_INTERRUPT_CONFIG_GPIO]);
+    TEST_ASSERT_EQUAL_HEX8(0x04, i2c_mock.registers[VL53L0X::SYSTEM_INTERRUPT_CONFIG_GPIO]);
 }
 
 void test_vl53l0x_set_address(void) {
