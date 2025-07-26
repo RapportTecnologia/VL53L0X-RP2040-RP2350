@@ -88,10 +88,10 @@ else()
 
     target_include_directories(run_tests PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/test/unity
-        ${CMAKE_CURRENT_SOURCE_DIR}/test # For pico_sdk_stubs.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/test
         ${CMAKE_CURRENT_SOURCE_DIR}
-        ${CMAKE_CURRENT_SOURCE_DIR}/vl53l0x
         ${CMAKE_CURRENT_SOURCE_DIR}/I2C
+        ${CMAKE_CURRENT_SOURCE_DIR}/vl53l0x
     )
 
 
