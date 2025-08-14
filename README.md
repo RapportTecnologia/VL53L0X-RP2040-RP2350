@@ -12,17 +12,21 @@ Este projeto implementa o firware para o sensor de distância VL53L0X usando o m
 
 ## Estrutura do Projeto
 
+Nota: Este projeto pode ser utilizado como submódulo dentro de um repositório raiz. O módulo `I2C/` foi movido para o diretório raiz do workspace e é referenciado via `../I2C` no `CMakeLists.txt`.
+
 ```
-RP2040-VL53L0x/
-├── rp2040-vl5310x.cpp     # Implementação principal
-├── vl53l0x/              # Biblioteca VL53L0X original
-│   ├── VL53L0X.h
-│   └── VL53L0X.cpp
-├── I2C/
-|   ├── I2C.h
-|   └── I2C.cpp
-├── CMakeLists.txt        # Configuração de build
-└── build/                # Arquivos de build
+Workspace/
+├── I2C/                  # Biblioteca I2C para RP2040
+    ├── I2C.h
+    └── I2C.cpp   
+├── VL53L0X-RP2040-RP2350/
+    ├── rp2040-vl5310x.cpp     # Implementação principal
+    ├── test/                 # Testes unitários
+    ├── CMakeLists.txt        # Configuração de build (usa ../I2C)
+    └── build/                # Arquivos de build (gerados)
+    ├── vl53l0x/              # Biblioteca VL53L0X original
+    │   ├── VL53L0X.h
+    │   └── VL53L0X.cpp
 ```
 
 ## Pinagem
@@ -93,8 +97,8 @@ sensor.timeoutOccurred()                // Verifica timeout
 
 1. **Preparar ambiente**:
 ```bash
-cd RP2040-VL53L0x
-mkdir build
+cd VL53L0X-RP2040-RP2350
+mkdir -p build
 cd build
 ```
 
