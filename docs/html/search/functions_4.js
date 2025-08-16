@@ -1,11 +1,14 @@
 var searchData=
 [
-  ['readmulti_0',['readMulti',['../classVL53L0X.html#a9decb4846fd2cc6d9c15b29ff2edc275',1,'VL53L0X']]],
-  ['readrangecontinuousmillimeters_1',['readRangeContinuousMillimeters',['../classVL53L0X.html#adc60c0fb1b9aa8b5642513f37cefa3e9',1,'VL53L0X']]],
-  ['readrangesinglemillimeters_2',['readRangeSingleMillimeters',['../classVL53L0X.html#ab4a4ab20cde669bee54a7e6efcc93cc1',1,'VL53L0X']]],
-  ['readreg_3',['readReg',['../classVL53L0X.html#a44cad5c80035df82bdc1c28894ac714e',1,'VL53L0X']]],
-  ['readreg16bit_4',['readReg16Bit',['../classVL53L0X.html#afa23131ef0c5edc982a3d9ab843fefc8',1,'VL53L0X']]],
-  ['readreg32bit_5',['readReg32Bit',['../classVL53L0X.html#a8e6edc19a09bff41ac070d22204ce5db',1,'VL53L0X']]],
-  ['reset_5fmock_5fi2c_6',['reset_mock_i2c',['../pico__sdk__mocks_8cpp.html#ad4eb026a5fa0fa8e82633e34cc4f6194',1,'reset_mock_i2c():&#160;pico_sdk_mocks.cpp'],['../pico__sdk__stubs_8h.html#ad4eb026a5fa0fa8e82633e34cc4f6194',1,'reset_mock_i2c():&#160;pico_sdk_mocks.cpp']]],
-  ['resettest_7',['resetTest',['../unity_8h.html#afb3a9b98e779c4f69e72aca5aa9fa1d7',1,'unity.h']]]
+  ['setaddress_0',['setAddress',['../classVL53L0X.html#a5fafb26368ff871653f4b56e060606fa',1,'VL53L0X']]],
+  ['setbus_1',['setBus',['../classVL53L0X.html#a23776f94480a1fad72f18cefb64a2829',1,'VL53L0X']]],
+  ['setmeasurementtimingbudget_2',['setMeasurementTimingBudget',['../classVL53L0X.html#a74e836308c2062c7871a37fe11c026ca',1,'VL53L0X']]],
+  ['setsignalratelimit_3',['setSignalRateLimit',['../classVL53L0X.html#a32ea0f8c88d634abcf36850ced40e9eb',1,'VL53L0X']]],
+  ['settimeout_4',['setTimeout',['../classVL53L0X.html#a421ae3c8aaad208e7e8c07c6f88cf486',1,'VL53L0X']]],
+  ['setup_5',['setup',['../test__main_8cpp.html#a95c834d6178047ce9e1bce7cbfea2836',1,'setUp(void):&#160;test_main.cpp'],['../unity_8h.html#a95c834d6178047ce9e1bce7cbfea2836',1,'setUp(void):&#160;test_main.cpp']]],
+  ['setvcselpulseperiod_6',['setVcselPulsePeriod',['../classVL53L0X.html#a2234b48a180b7eb630b7a82cfa4c3b44',1,'VL53L0X']]],
+  ['startcontinuous_7',['startContinuous',['../classVL53L0X.html#a502070924e6c6fa39a7a003bdf1c8663',1,'VL53L0X']]],
+  ['stopcontinuous_8',['stopContinuous',['../classVL53L0X.html#a9baaa89bf4ec81e038259d95c098f6b2',1,'VL53L0X']]],
+  ['suitesetup_9',['suiteSetUp',['../unity_8h.html#a0f08bc53b5978d3892a36f98df005b37',1,'unity.h']]],
+  ['suiteteardown_10',['suiteTearDown',['../unity_8h.html#a3eac1f0f22f9093d82efeed457a1b1d3',1,'unity.h']]]
 ];

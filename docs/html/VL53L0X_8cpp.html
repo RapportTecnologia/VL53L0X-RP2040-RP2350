@@ -100,12 +100,13 @@ $(document).ready(function(){initNavTree('VL53L0X_8cpp.html',''); initResizable(
 <a href="#details">Mais...</a></p>
 <div class="textblock"><code>#include &lt;cstdio&gt;</code><br />
 <code>#include &quot;<a class="el" href="VL53L0X_8h_source.html">VL53L0X.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="time_8h_source.html">pico/time.h</a>&quot;</code><br />
+<code>#include &quot;pico/time.h&quot;</code><br />
+<code>#include &quot;I2C.h&quot;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Diagrama de dependências de inclusão para VL53L0X.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="VL53L0X_8cpp__incl.svg" width="334" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="VL53L0X_8cpp__incl.svg" width="476" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -114,13 +115,13 @@ Macros</h2></td></tr>
 <tr class="separator:a30fb368731cff42bb217818d9d160035"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f0c17e6d23211686e92570b058587f3" id="r_a5f0c17e6d23211686e92570b058587f3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VL53L0X_8cpp.html#a5f0c17e6d23211686e92570b058587f3">calcMacroPeriod</a>(vcsel_period_pclks)&#160;&#160;&#160;((((uint32_t)2304 * (vcsel_period_pclks) * 1655) + 500) / 1000)</td></tr>
 <tr class="separator:a5f0c17e6d23211686e92570b058587f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abab7c5b1cbb48c1f149d63407116b4a7" id="r_abab7c5b1cbb48c1f149d63407116b4a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VL53L0X_8cpp.html#abab7c5b1cbb48c1f149d63407116b4a7">checkTimeoutExpired</a>()&#160;&#160;&#160;(io_timeout &gt; 0 &amp;&amp; ((uint32_t)(<a class="el" href="pico__sdk__mocks_8cpp.html#ac1fefb71a616b487809284b5329c021b">to_ms_since_boot</a>(<a class="el" href="pico__sdk__mocks_8cpp.html#a3148c2194da0af9c04af97336818edf8">get_absolute_time</a>()) - timeout_start_ms) &gt; io_timeout))</td></tr>
+<tr class="memitem:abab7c5b1cbb48c1f149d63407116b4a7" id="r_abab7c5b1cbb48c1f149d63407116b4a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VL53L0X_8cpp.html#abab7c5b1cbb48c1f149d63407116b4a7">checkTimeoutExpired</a>()&#160;&#160;&#160;(io_timeout &gt; 0 &amp;&amp; ((uint32_t)(to_ms_since_boot(get_absolute_time()) - timeout_start_ms) &gt; io_timeout))</td></tr>
 <tr class="separator:abab7c5b1cbb48c1f149d63407116b4a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dcb8458d7b06d003fc1c4786c492efa" id="r_a7dcb8458d7b06d003fc1c4786c492efa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VL53L0X_8cpp.html#a7dcb8458d7b06d003fc1c4786c492efa">decodeVcselPeriod</a>(reg_val)&#160;&#160;&#160;(((reg_val) + 1) &lt;&lt; 1)</td></tr>
 <tr class="separator:a7dcb8458d7b06d003fc1c4786c492efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa731eb10dead51651d0d803c530478e0" id="r_aa731eb10dead51651d0d803c530478e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VL53L0X_8cpp.html#aa731eb10dead51651d0d803c530478e0">encodeVcselPeriod</a>(period_pclks)&#160;&#160;&#160;(((period_pclks) &gt;&gt; 1) - 1)</td></tr>
 <tr class="separator:aa731eb10dead51651d0d803c530478e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46385c6ddb246732ce8eab387abfbb1b" id="r_a46385c6ddb246732ce8eab387abfbb1b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VL53L0X_8cpp.html#a46385c6ddb246732ce8eab387abfbb1b">startTimeout</a>()&#160;&#160;&#160;(timeout_start_ms = <a class="el" href="pico__sdk__mocks_8cpp.html#ac1fefb71a616b487809284b5329c021b">to_ms_since_boot</a>(<a class="el" href="pico__sdk__mocks_8cpp.html#a3148c2194da0af9c04af97336818edf8">get_absolute_time</a>()))</td></tr>
+<tr class="memitem:a46385c6ddb246732ce8eab387abfbb1b" id="r_a46385c6ddb246732ce8eab387abfbb1b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VL53L0X_8cpp.html#a46385c6ddb246732ce8eab387abfbb1b">startTimeout</a>()&#160;&#160;&#160;(timeout_start_ms = to_ms_since_boot(get_absolute_time()))</td></tr>
 <tr class="separator:a46385c6ddb246732ce8eab387abfbb1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
@@ -169,7 +170,7 @@ Macros</h2></td></tr>
           <td class="memname">#define checkTimeoutExpired</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(io_timeout &gt; 0 &amp;&amp; ((uint32_t)(<a class="el" href="pico__sdk__mocks_8cpp.html#ac1fefb71a616b487809284b5329c021b">to_ms_since_boot</a>(<a class="el" href="pico__sdk__mocks_8cpp.html#a3148c2194da0af9c04af97336818edf8">get_absolute_time</a>()) - timeout_start_ms) &gt; io_timeout))</td>
+          <td>&#160;&#160;&#160;(io_timeout &gt; 0 &amp;&amp; ((uint32_t)(to_ms_since_boot(get_absolute_time()) - timeout_start_ms) &gt; io_timeout))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -222,7 +223,7 @@ Macros</h2></td></tr>
           <td class="memname">#define startTimeout</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(timeout_start_ms = <a class="el" href="pico__sdk__mocks_8cpp.html#ac1fefb71a616b487809284b5329c021b">to_ms_since_boot</a>(<a class="el" href="pico__sdk__mocks_8cpp.html#a3148c2194da0af9c04af97336818edf8">get_absolute_time</a>()))</td>
+          <td>&#160;&#160;&#160;(timeout_start_ms = to_ms_since_boot(get_absolute_time()))</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['calcmacroperiod_0',['calcMacroPeriod',['../VL53L0X_8cpp.html#a5f0c17e6d23211686e92570b058587f3',1,'VL53L0X.cpp']]],
-  ['checktimeoutexpired_1',['checkTimeoutExpired',['../VL53L0X_8cpp.html#abab7c5b1cbb48c1f149d63407116b4a7',1,'VL53L0X.cpp']]]
+  ['address_5fdefault_0',['ADDRESS_DEFAULT',['../VL53L0X_8cpp.html#a30fb368731cff42bb217818d9d160035',1,'VL53L0X.cpp']]],
+  ['architecture_5fid_1',['architecture_id',['../CMakeCCompilerId_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCXXCompilerId.cpp']]]
 ];

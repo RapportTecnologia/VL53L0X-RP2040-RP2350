@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gpio_5ffunction_0',['gpio_function',['../pico__sdk__stubs_8h.html#a2af81373f9f5764ac1a5bd6097477530',1,'pico_sdk_stubs.h']]]
+  ['dreq_5fnum_5frp2040_0',['dreq_num_rp2040',['../dreq_8h.html#a864c3313155ab20116b62a64bf78df6d',1,'dreq.h']]]
 ];

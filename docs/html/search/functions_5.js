@@ -1,15 +1,14 @@
 var searchData=
 [
-  ['setaddress_0',['setAddress',['../classVL53L0X.html#a5fafb26368ff871653f4b56e060606fa',1,'VL53L0X']]],
-  ['setbus_1',['setBus',['../classVL53L0X.html#a23776f94480a1fad72f18cefb64a2829',1,'VL53L0X']]],
-  ['setmeasurementtimingbudget_2',['setMeasurementTimingBudget',['../classVL53L0X.html#a74e836308c2062c7871a37fe11c026ca',1,'VL53L0X']]],
-  ['setsignalratelimit_3',['setSignalRateLimit',['../classVL53L0X.html#a32ea0f8c88d634abcf36850ced40e9eb',1,'VL53L0X']]],
-  ['settimeout_4',['setTimeout',['../classVL53L0X.html#a421ae3c8aaad208e7e8c07c6f88cf486',1,'VL53L0X']]],
-  ['setup_5',['setup',['../test__main_8cpp.html#a95c834d6178047ce9e1bce7cbfea2836',1,'setUp(void):&#160;test_main.cpp'],['../unity_8h.html#a95c834d6178047ce9e1bce7cbfea2836',1,'setUp(void):&#160;test_main.cpp']]],
-  ['setvcselpulseperiod_6',['setVcselPulsePeriod',['../classVL53L0X.html#a2234b48a180b7eb630b7a82cfa4c3b44',1,'VL53L0X']]],
-  ['sleep_5fms_7',['sleep_ms',['../pico__sdk__mocks_8cpp.html#ae617a6842d4f3a192064c4354b88fcff',1,'sleep_ms(uint32_t ms):&#160;pico_sdk_mocks.cpp'],['../pico__sdk__stubs_8h.html#ae617a6842d4f3a192064c4354b88fcff',1,'sleep_ms(uint32_t ms):&#160;pico_sdk_mocks.cpp']]],
-  ['startcontinuous_8',['startContinuous',['../classVL53L0X.html#a502070924e6c6fa39a7a003bdf1c8663',1,'VL53L0X']]],
-  ['stopcontinuous_9',['stopContinuous',['../classVL53L0X.html#a9baaa89bf4ec81e038259d95c098f6b2',1,'VL53L0X']]],
-  ['suitesetup_10',['suiteSetUp',['../unity_8h.html#a0f08bc53b5978d3892a36f98df005b37',1,'unity.h']]],
-  ['suiteteardown_11',['suiteTearDown',['../unity_8h.html#a3eac1f0f22f9093d82efeed457a1b1d3',1,'unity.h']]]
+  ['teardown_0',['teardown',['../test__main_8cpp.html#a9909011e5fea0c018842eec4d93d0662',1,'tearDown(void):&#160;test_main.cpp'],['../unity_8h.html#a9909011e5fea0c018842eec4d93d0662',1,'tearDown(void):&#160;test_main.cpp']]],
+  ['test_5fi2c_5fbegin_1',['test_i2c_begin',['../test__main_8cpp.html#a1bf7d5b416eb6e8c24d774ccf3bfaa27',1,'test_main.cpp']]],
+  ['test_5fi2c_5ffull_5ftransaction_2',['test_i2c_full_transaction',['../test__main_8cpp.html#a7fcf5d598d2f3b2790aa74d7f2eccc29',1,'test_main.cpp']]],
+  ['test_5fi2c_5fwrite_5farray_3',['test_i2c_write_array',['../test__main_8cpp.html#a1a5b9939720373f62c85fb39fd563247',1,'test_main.cpp']]],
+  ['test_5fvl53l0x_5finit_5fsuccess_4',['test_vl53l0x_init_success',['../test__main_8cpp.html#a59a4aaa5feace1cb2e6a27373da9e982',1,'test_main.cpp']]],
+  ['test_5fvl53l0x_5fread_5fwrite_5freg_5',['test_vl53l0x_read_write_reg',['../test__main_8cpp.html#a5affbf541dc13777bfe07c8054f63b9f',1,'test_main.cpp']]],
+  ['test_5fvl53l0x_5fread_5fwrite_5freg16_6',['test_vl53l0x_read_write_reg16',['../test__main_8cpp.html#a78fe5dfc5475e4f492297536ca141a00',1,'test_main.cpp']]],
+  ['test_5fvl53l0x_5fset_5faddress_7',['test_vl53l0x_set_address',['../test__main_8cpp.html#af1546dbf37184956625ccc69af27d6a1',1,'test_main.cpp']]],
+  ['test_5fvl53l0x_5fsingle_5fshot_5fmeasurement_8',['test_vl53l0x_single_shot_measurement',['../test__main_8cpp.html#acf1337550fc07d34637535bdde5eaf61',1,'test_main.cpp']]],
+  ['test_5fvl53l0x_5ftimeout_5foccurred_9',['test_vl53l0x_timeout_occurred',['../test__main_8cpp.html#a784a9b44582d115c1d58797326fa1c34',1,'test_main.cpp']]],
+  ['timeoutoccurred_10',['timeoutOccurred',['../classVL53L0X.html#af0c5780fbd61d21008efc63dfd958ab4',1,'VL53L0X']]]
 ];

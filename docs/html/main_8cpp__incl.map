@@ -2,21 +2,14 @@
 <area shape="rect" id="Node000001" title=" " alt="" coords="249,5,332,31"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,79,72,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,33,86,79,85,74,249,28"/>
-<area shape="rect" id="Node000003" href="$stdlib_8h.html" title=" " alt="" coords="96,79,197,104"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="96,79,197,104"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="269,33,184,75,181,70,266,28"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="221,79,360,104"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="293,31,293,65,288,65,288,31"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="384,79,464,104"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="313,28,391,70,389,74,311,33"/>
-<area shape="rect" id="Node000010" href="$VL53L0X_8h.html" title="Interface C++ para o sensor de distância VL53L0X (Time&#45;of&#45;Flight) no RP2040." alt="" coords="358,152,501,177"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="333,17,369,21,409,31,447,49,464,61,478,77,484,95,480,113,469,129,456,144,452,141,465,126,475,111,479,95,474,80,460,65,444,53,407,36,368,26,332,22"/>
-<area shape="rect" id="Node000004" href="$pico__sdk__stubs_8h.html" title=" " alt="" coords="167,152,313,177"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="163,102,216,141,212,146,160,106"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="364,225,431,251"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="266,175,360,217,358,222,264,180"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="151,225,222,251"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="233,179,206,216,201,213,229,176"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="247,225,297,251"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="248,177,264,212,259,214,243,179"/>
-<area shape="poly" id="edge10_Node000010_Node000005" title=" " alt="" coords="426,179,410,214,406,212,422,177"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="221,79,360,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="293,31,293,65,288,65,288,31"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="385,79,439,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="312,28,382,69,379,74,309,33"/>
+<area shape="rect" id="Node000006" href="$VL53L0X_8h.html" title="Interface C++ para o sensor de distância VL53L0X (Time&#45;of&#45;Flight) no RP2040." alt="" coords="463,79,606,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="331,28,483,72,481,77,329,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="501,152,568,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="537,104,537,138,532,138,532,104"/>
 </map>
