@@ -1,32 +1,42 @@
+/**
+ * \file rp2040-vl5310x.cpp
+ * \brief Exemplo de uso do sensor VL53L0X no RP2040 (Pico/Pico W).
+ *
+ * Demonstra inicialização do I2C, configuração do sensor e leituras
+ * periódicas de distância em milímetros via USB/serial.
+ */
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "pico/binary_info.h"
 #include "I2C/I2C.h"
 #include "vl53l0x/VL53L0X.h"
 
-// Define I2C pins
+// Pinos do barramento I2C utilizados
 #define I2C_SDA_PIN 2
 #define I2C_SCL_PIN 3
 
+/**
+ * \brief Função principal: inicializa comunicação, configura VL53L0X e exibe leituras.
+ */
 int main() {
-    // Initialize stdio for USB output
+    // Inicializa STDIO para saída via USB
     stdio_init_all();
 
-    // Wait for USB connection
+    // Aguarda conexão USB para logging
     while (!stdio_usb_connected()) {
         sleep_ms(100);
     }
     printf("RP2040-VL53L0X Refactored Project\n");
 
-    // Create I2C instance
+    // Instância do I2C e configuração básica
     I2C i2c(i2c1, I2C_SDA_PIN, I2C_SCL_PIN);
     i2c.begin();
     i2c.setClock(400000); // 400kHz
 
-    // Add pin info for picotool
+    // Exporta info de pinos para picotool
     bi_decl(bi_2pins_with_func(I2C_SDA_PIN, I2C_SCL_PIN, GPIO_FUNC_I2C));
 
-    // Create and configure sensor
+    // Cria e configura o sensor
     VL53L0X sensor;
     sensor.setBus(&i2c);
 
@@ -37,7 +47,7 @@ int main() {
     }
     printf("VL53L0X sensor initialized.\n");
 
-    // Configure sensor settings
+    // Configuração recomendada
     sensor.setTimeout(500);
     sensor.setMeasurementTimingBudget(50000);
     sensor.setSignalRateLimit(0.1);

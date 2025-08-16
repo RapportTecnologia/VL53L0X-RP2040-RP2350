@@ -47,7 +47,7 @@ if(BUILD_FOR_PICO)
     pico_sdk_init()
 
     add_executable(rp2040_vl53l0x
-            rp2040-vl5310x.cpp
+            main.cpp
             ../I2C/I2C.cpp
             vl53l0x/VL53L0X.cpp
             )
