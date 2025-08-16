@@ -4,19 +4,41 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VL53L0X-RP2040-RP2350 — Documentação</title>
-  <style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;margin:2rem;line-height:1.5;color:#222}a.button{display:inline-block;margin-top:1rem;padding:.6rem 1rem;background:#0b5ed7;color:#fff;text-decoration:none;border-radius:.4rem}.muted{color:#666}header h1{margin:.2rem 0}header p{margin:.2rem 0}footer{margin-top:3rem;font-size:.9rem}</style>
+  <style>
+    :root{--fg:#222;--muted:#666;--bg:#f7f7f9;--btn:#0b5ed7;--btn-hover:#0a53be}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif;margin:0;line-height:1.5;color:var(--fg);background:var(--bg)}
+    .container{max-width:900px;margin:0 auto;padding:24px}
+    header{display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:8px}
+    header .brand{display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;color:inherit}
+    header img.logo{width:120px;height:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.1))}
+    header h1{margin:.2rem 0}
+    header p{margin:.2rem 0;color:var(--muted)}
+    .card{background:#fff;border-radius:12px;padding:16px 20px;margin:16px 0;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .actions{display:flex;flex-wrap:wrap;gap:10px}
+    a.button{display:inline-block;padding:.6rem 1rem;background:var(--btn);color:#fff;text-decoration:none;border-radius:.5rem}
+    a.button:hover{background:var(--btn-hover)}
+    footer{margin:24px 0 8px;text-align:center;font-size:.9rem;color:var(--muted)}
+    @media (min-width: 720px){header img.logo{width:140px}.card{padding:20px 24px}}
+  </style>
 </head>
 <body>
-  <header>
-    <h1>RP2040 VL53L0X Distance Sensor Project</h1>
-    <p class="muted">Firmware para o sensor ToF VL53L0X no RP2040, com I2C a 400 kHz e APIs de alto nível.</p>
-  </header>
-  <section>
-    <p>
-      <a class="button" href="html/index.html">Abrir documentação Doxygen</a>
-      <a class="button" href="https://github.com/RapportTecnologia/VL53L0X-RP2040-RP2350" target="_blank" rel="noopener">Ver no GitHub</a>
-    </p>
-  </section>
-  <footer><p>Gerado automaticamente a partir de README.md</p></footer>
+  <div class="container">
+    <header>
+      <a class="brand" href="https://rapport.tec.br/VL53L0X-RP2040-RP2350" target="_blank" rel="noopener">
+        <img class="logo" src="../../docs/imgs/logo_do_projeto.png" alt="Logo do projeto" />
+        <h1>RP2040 VL53L0X Distance Sensor Project</h1>
+      </a>
+      <p>Firmware para o sensor ToF VL53L0X no RP2040, com I2C a 400 kHz e APIs de alto nível.</p>
+    </header>
+    <section class="card">
+      <div class="actions">
+        <a class="button" href="html/index.html">Abrir documentação Doxygen</a>
+        <a class="button" href="https://github.com/RapportTecnologia/VL53L0X-RP2040-RP2350" target="_blank" rel="noopener">Ver no GitHub</a>
+        <a class="button" href="https://rapport.tec.br/VL53L0X-RP2040-RP2350" target="_blank" rel="noopener">Abrir em rapport.tec.br</a>
+      </div>
+    </section>
+    <footer><p>Gerado automaticamente a partir de README.md</p></footer>
+  </div>
 </body>
 </html>
