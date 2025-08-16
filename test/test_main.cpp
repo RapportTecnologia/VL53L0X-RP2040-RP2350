@@ -1,5 +1,5 @@
 #include "unity.h"
-#include "../I2C/I2C.h"
+#include "I2C.h"
 #include "../vl53l0x/VL53L0X.h"
 #include "pico_sdk_stubs.h"
 

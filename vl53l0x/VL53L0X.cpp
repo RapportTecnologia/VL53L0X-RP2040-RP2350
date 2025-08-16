@@ -14,6 +14,7 @@
 #include <cstdio>
 #include "VL53L0X.h"
 #include "pico/time.h"
+#include "I2C.h"
 
 // Defines /////////////////////////////////////////////////////////////////////
 
