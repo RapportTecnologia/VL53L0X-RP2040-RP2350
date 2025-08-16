@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['readme_2emd_0',['README.md',['../README_8md.html',1,'']]],
+  ['readmulti_1',['readMulti',['../classVL53L0X.html#a9decb4846fd2cc6d9c15b29ff2edc275',1,'VL53L0X']]],
+  ['readrangecontinuousmillimeters_2',['readRangeContinuousMillimeters',['../classVL53L0X.html#adc60c0fb1b9aa8b5642513f37cefa3e9',1,'VL53L0X']]],
+  ['readrangesinglemillimeters_3',['readRangeSingleMillimeters',['../classVL53L0X.html#ab4a4ab20cde669bee54a7e6efcc93cc1',1,'VL53L0X']]],
+  ['readreg_4',['readReg',['../classVL53L0X.html#a44cad5c80035df82bdc1c28894ac714e',1,'VL53L0X']]],
+  ['readreg16bit_5',['readReg16Bit',['../classVL53L0X.html#afa23131ef0c5edc982a3d9ab843fefc8',1,'VL53L0X']]],
+  ['readreg32bit_6',['readReg32Bit',['../classVL53L0X.html#a8e6edc19a09bff41ac070d22204ce5db',1,'VL53L0X']]],
+  ['recursos_20avançados_7',['Recursos Avançados',['../index.html#autotoc_md9',1,'']]],
+  ['regaddr_8',['regAddr',['../classVL53L0X.html#ae9d956d60961a009db8621edde00bfea',1,'VL53L0X']]],
+  ['registers_9',['registers',['../structI2CMock.html#ab5e340b358021f5e44f7cefbec367d98',1,'I2CMock']]],
+  ['requisitos_10',['Pré-requisitos',['../index.html#autotoc_md11',1,'']]],
+  ['reset_5fmock_5fi2c_11',['reset_mock_i2c',['../pico__sdk__stubs_8h.html#ad4eb026a5fa0fa8e82633e34cc4f6194',1,'reset_mock_i2c():&#160;pico_sdk_mocks.cpp'],['../pico__sdk__mocks_8cpp.html#ad4eb026a5fa0fa8e82633e34cc4f6194',1,'reset_mock_i2c():&#160;pico_sdk_mocks.cpp']]],
+  ['resettest_12',['resetTest',['../unity_8h.html#afb3a9b98e779c4f69e72aca5aa9fa1d7',1,'unity.h']]],
+  ['result_5fcore_5fambient_5fwindow_5fevents_5fref_13',['RESULT_CORE_AMBIENT_WINDOW_EVENTS_REF',['../classVL53L0X.html#ae9d956d60961a009db8621edde00bfeaad488d79333fe4cd14ff9867e5c065a0a',1,'VL53L0X']]],
+  ['result_5fcore_5fambient_5fwindow_5fevents_5frtn_14',['RESULT_CORE_AMBIENT_WINDOW_EVENTS_RTN',['../classVL53L0X.html#ae9d956d60961a009db8621edde00bfeaa17eaace370b3c5791adbcc4d8f58783f',1,'VL53L0X']]],
+  ['result_5fcore_5franging_5ftotal_5fevents_5fref_15',['RESULT_CORE_RANGING_TOTAL_EVENTS_REF',['../classVL53L0X.html#ae9d956d60961a009db8621edde00bfeaae7293d21ff8d9d1ee2c1b06babbce117',1,'VL53L0X']]],
+  ['result_5fcore_5franging_5ftotal_5fevents_5frtn_16',['RESULT_CORE_RANGING_TOTAL_EVENTS_RTN',['../classVL53L0X.html#ae9d956d60961a009db8621edde00bfeaaaea666cacc39f0e507a41033ad25c004',1,'VL53L0X']]],
+  ['result_5finterrupt_5fstatus_17',['RESULT_INTERRUPT_STATUS',['../classVL53L0X.html#ae9d956d60961a009db8621edde00bfeaaf252da428658d8085214e887d4b0077e',1,'VL53L0X']]],
+  ['result_5fpeak_5fsignal_5frate_5fref_18',['RESULT_PEAK_SIGNAL_RATE_REF',['../classVL53L0X.html#ae9d956d60961a009db8621edde00bfeaa3379513f0c96a791c5a05f1e61bf6595',1,'VL53L0X']]],
+  ['result_5frange_5fstatus_19',['RESULT_RANGE_STATUS',['../classVL53L0X.html#ae9d956d60961a009db8621edde00bfeaac7b761e428bb5d121241227a925f5d6f',1,'VL53L0X']]],
+  ['return_5fif_5ffail_5for_5fignore_20',['RETURN_IF_FAIL_OR_IGNORE',['../unity_8c.html#abf9f99b384602e58874744dda3492aaa',1,'unity.c']]],
+  ['rp2040_20vl53l0x_20distance_20sensor_20project_21',['RP2040 VL53L0X Distance Sensor Project',['../index.html',1,'']]],
+  ['rp2040_2dvl5310x_2ecpp_22',['rp2040-vl5310x.cpp',['../rp2040-vl5310x_8cpp.html',1,'']]],
+  ['run_5ftest_23',['RUN_TEST',['../unity__internals_8h.html#a27cf08abbe33174b41d808a147cfef11',1,'unity_internals.h']]]
+];

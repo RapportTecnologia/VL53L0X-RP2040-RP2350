@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RP2040 VL53L0X: Referência ao ficheiro VL53L0X.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">RP2040 VL53L0X
+   </div>
+   <div id="projectbrief">Sensor VL53L0X para RP2040 (Pico/Pico W)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('VL53L0X_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a>  </div>
+  <div class="headertitle"><div class="title">Referência ao ficheiro VL53L0X.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implementação da classe <a class="el" href="classVL53L0X.html" title="Classe que encapsula a comunicação e configuração do sensor VL53L0X.">VL53L0X</a> para RP2040.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &lt;cstdio&gt;</code><br />
+<code>#include &quot;<a class="el" href="VL53L0X_8h_source.html">VL53L0X.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="time_8h_source.html">pico/time.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Diagrama de dependências de inclusão para VL53L0X.cpp:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="VL53L0X_8cpp__incl.svg" width="334" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a30fb368731cff42bb217818d9d160035" id="r_a30fb368731cff42bb217818d9d160035"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VL53L0X_8cpp.html#a30fb368731cff42bb217818d9d160035">ADDRESS_DEFAULT</a>&#160;&#160;&#160;0b0101001</td></tr>
+<tr class="separator:a30fb368731cff42bb217818d9d160035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f0c17e6d23211686e92570b058587f3" id="r_a5f0c17e6d23211686e92570b058587f3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VL53L0X_8cpp.html#a5f0c17e6d23211686e92570b058587f3">calcMacroPeriod</a>(vcsel_period_pclks)&#160;&#160;&#160;((((uint32_t)2304 * (vcsel_period_pclks) * 1655) + 500) / 1000)</td></tr>
+<tr class="separator:a5f0c17e6d23211686e92570b058587f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abab7c5b1cbb48c1f149d63407116b4a7" id="r_abab7c5b1cbb48c1f149d63407116b4a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VL53L0X_8cpp.html#abab7c5b1cbb48c1f149d63407116b4a7">checkTimeoutExpired</a>()&#160;&#160;&#160;(io_timeout &gt; 0 &amp;&amp; ((uint32_t)(<a class="el" href="pico__sdk__mocks_8cpp.html#ac1fefb71a616b487809284b5329c021b">to_ms_since_boot</a>(<a class="el" href="pico__sdk__mocks_8cpp.html#a3148c2194da0af9c04af97336818edf8">get_absolute_time</a>()) - timeout_start_ms) &gt; io_timeout))</td></tr>
+<tr class="separator:abab7c5b1cbb48c1f149d63407116b4a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dcb8458d7b06d003fc1c4786c492efa" id="r_a7dcb8458d7b06d003fc1c4786c492efa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VL53L0X_8cpp.html#a7dcb8458d7b06d003fc1c4786c492efa">decodeVcselPeriod</a>(reg_val)&#160;&#160;&#160;(((reg_val) + 1) &lt;&lt; 1)</td></tr>
+<tr class="separator:a7dcb8458d7b06d003fc1c4786c492efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa731eb10dead51651d0d803c530478e0" id="r_aa731eb10dead51651d0d803c530478e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VL53L0X_8cpp.html#aa731eb10dead51651d0d803c530478e0">encodeVcselPeriod</a>(period_pclks)&#160;&#160;&#160;(((period_pclks) &gt;&gt; 1) - 1)</td></tr>
+<tr class="separator:aa731eb10dead51651d0d803c530478e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46385c6ddb246732ce8eab387abfbb1b" id="r_a46385c6ddb246732ce8eab387abfbb1b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VL53L0X_8cpp.html#a46385c6ddb246732ce8eab387abfbb1b">startTimeout</a>()&#160;&#160;&#160;(timeout_start_ms = <a class="el" href="pico__sdk__mocks_8cpp.html#ac1fefb71a616b487809284b5329c021b">to_ms_since_boot</a>(<a class="el" href="pico__sdk__mocks_8cpp.html#a3148c2194da0af9c04af97336818edf8">get_absolute_time</a>()))</td></tr>
+<tr class="separator:a46385c6ddb246732ce8eab387abfbb1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Implementação da classe <a class="el" href="classVL53L0X.html" title="Classe que encapsula a comunicação e configuração do sensor VL53L0X.">VL53L0X</a> para RP2040. </p>
+<p>A maior parte da funcionalidade desta biblioteca é baseada na API do <a class="el" href="classVL53L0X.html" title="Classe que encapsula a comunicação e configuração do sensor VL53L0X.">VL53L0X</a> fornecida pela ST (STSW-IMG005). Alguns comentários explicativos foram adaptados do código-fonte da API, do manual do usuário (UM2039) e do datasheet do <a class="el" href="classVL53L0X.html" title="Classe que encapsula a comunicação e configuração do sensor VL53L0X.">VL53L0X</a>. </p>
+</div><h2 class="groupheader">Documentação das macros</h2>
+<a id="a30fb368731cff42bb217818d9d160035" name="a30fb368731cff42bb217818d9d160035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30fb368731cff42bb217818d9d160035">&#9670;&#160;</a></span>ADDRESS_DEFAULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADDRESS_DEFAULT&#160;&#160;&#160;0b0101001</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f0c17e6d23211686e92570b058587f3" name="a5f0c17e6d23211686e92570b058587f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f0c17e6d23211686e92570b058587f3">&#9670;&#160;</a></span>calcMacroPeriod</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define calcMacroPeriod</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">vcsel_period_pclks</td><td>)</td>
+          <td>&#160;&#160;&#160;((((uint32_t)2304 * (vcsel_period_pclks) * 1655) + 500) / 1000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abab7c5b1cbb48c1f149d63407116b4a7" name="abab7c5b1cbb48c1f149d63407116b4a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abab7c5b1cbb48c1f149d63407116b4a7">&#9670;&#160;</a></span>checkTimeoutExpired</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define checkTimeoutExpired</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(io_timeout &gt; 0 &amp;&amp; ((uint32_t)(<a class="el" href="pico__sdk__mocks_8cpp.html#ac1fefb71a616b487809284b5329c021b">to_ms_since_boot</a>(<a class="el" href="pico__sdk__mocks_8cpp.html#a3148c2194da0af9c04af97336818edf8">get_absolute_time</a>()) - timeout_start_ms) &gt; io_timeout))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7dcb8458d7b06d003fc1c4786c492efa" name="a7dcb8458d7b06d003fc1c4786c492efa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dcb8458d7b06d003fc1c4786c492efa">&#9670;&#160;</a></span>decodeVcselPeriod</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define decodeVcselPeriod</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">reg_val</td><td>)</td>
+          <td>&#160;&#160;&#160;(((reg_val) + 1) &lt;&lt; 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa731eb10dead51651d0d803c530478e0" name="aa731eb10dead51651d0d803c530478e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa731eb10dead51651d0d803c530478e0">&#9670;&#160;</a></span>encodeVcselPeriod</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define encodeVcselPeriod</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">period_pclks</td><td>)</td>
+          <td>&#160;&#160;&#160;(((period_pclks) &gt;&gt; 1) - 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46385c6ddb246732ce8eab387abfbb1b" name="a46385c6ddb246732ce8eab387abfbb1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46385c6ddb246732ce8eab387abfbb1b">&#9670;&#160;</a></span>startTimeout</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define startTimeout</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(timeout_start_ms = <a class="el" href="pico__sdk__mocks_8cpp.html#ac1fefb71a616b487809284b5329c021b">to_ms_since_boot</a>(<a class="el" href="pico__sdk__mocks_8cpp.html#a3148c2194da0af9c04af97336818edf8">get_absolute_time</a>()))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e35fbe9b0696af382dd31562f909110a.html">vl53l0x</a></li><li class="navelem"><a class="el" href="VL53L0X_8cpp.html">VL53L0X.cpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

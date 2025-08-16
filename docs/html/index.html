@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RP2040 VL53L0X: RP2040 VL53L0X Distance Sensor Project</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">RP2040 VL53L0X
+   </div>
+   <div id="projectbrief">Sensor VL53L0X para RP2040 (Pico/Pico W)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">RP2040 <a class="el" href="classVL53L0X.html" title="Classe que encapsula a comunicação e configuração do sensor VL53L0X.">VL53L0X</a> Distance Sensor Project </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a> Este projeto implementa o firware para o sensor de distância <a class="el" href="classVL53L0X.html" title="Classe que encapsula a comunicação e configuração do sensor VL53L0X.">VL53L0X</a> usando o microcontrolador RP2040 (Raspberry Pi Pico ou Pico W) com bibliotecas de alto nível.</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Características</h1>
+<ul>
+<li><b>Sensor</b>: <a class="el" href="classVL53L0X.html" title="Classe que encapsula a comunicação e configuração do sensor VL53L0X.">VL53L0X</a> Time-of-Flight (ToF) laser ranging sensor</li>
+<li><b>Microcontrolador</b>: RP2040 (Raspberry Pi Pico W)</li>
+<li><b>Interface</b>: I2C (400kHz)</li>
+<li><b>Linguagem</b>: C++ com compatibilidade Arduino</li>
+<li><b>SDK</b>: Raspberry Pi Pico SDK 2.1.0</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Estrutura do Projeto</h1>
+<p>Nota: Este projeto pode ser utilizado como submódulo dentro de um repositório raiz. O módulo <code>I2C/</code> foi movido para o diretório raiz do workspace e é referenciado via <code>../I2C</code> no <code>CMakeLists.txt</code>.</p>
+<div class="fragment"><div class="line">Workspace/</div>
+<div class="line">├── I2C/                  # Biblioteca I2C para RP2040</div>
+<div class="line">    ├── I2C.h</div>
+<div class="line">    └── I2C.cpp   </div>
+<div class="line">├── VL53L0X-RP2040-RP2350/</div>
+<div class="line">    ├── rp2040-vl5310x.cpp     # Implementação principal</div>
+<div class="line">    ├── test/                 # Testes unitários</div>
+<div class="line">    ├── CMakeLists.txt        # Configuração de build (usa ../I2C)</div>
+<div class="line">    └── build/                # Arquivos de build (gerados)</div>
+<div class="line">    ├── vl53l0x/              # Biblioteca VL53L0X original</div>
+<div class="line">    │   ├── VL53L0X.h</div>
+<div class="line">    │   └── VL53L0X.cpp</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
+Pinagem</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Função   </th><th class="markdownTableHeadNone">GPIO   </th><th class="markdownTableHeadNone">Pino Físico    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">SDA   </td><td class="markdownTableBodyNone">GP4   </td><td class="markdownTableBodyNone">Pin 6    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">SCL   </td><td class="markdownTableBodyNone">GP5   </td><td class="markdownTableBodyNone">Pin 7    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">VCC   </td><td class="markdownTableBodyNone">3V3   </td><td class="markdownTableBodyNone">Pin 36    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">GND   </td><td class="markdownTableBodyNone">GND   </td><td class="markdownTableBodyNone">Pin 38   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Bibliotecas Utilizadas</h1>
+<h2><a class="anchor" id="autotoc_md5"></a>
+1. I2C (Criada para este projeto)</h2>
+<ul>
+<li>Interface e funções de apoio para I2C</li>
+<li>Implementação otimizada para Pico SDK</li>
+<li>Suporte a operações master I2C</li>
+<li>Buffer de 128 bytes para TX/RX</li>
+</ul>
+<p><b>Principais métodos:</b> </p><div class="fragment"><div class="line">I2C.begin()                    <span class="comment">// Inicializa I2C</span></div>
+<div class="line">I2C.setClock(400000)          <span class="comment">// Define frequência</span></div>
+<div class="line">I2C.beginTransmission(addr)   <span class="comment">// Inicia transmissão</span></div>
+<div class="line">I2C.write(data)               <span class="comment">// Escreve dados</span></div>
+<div class="line">I2C.endTransmission()         <span class="comment">// Finaliza transmissão</span></div>
+<div class="line">I2C.requestFrom(addr, len)    <span class="comment">// Solicita dados</span></div>
+<div class="line">I2C.read()                    <span class="comment">// Lê dados recebidos</span></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
+2. VL53L0X Library</h2>
+<ul>
+<li>Biblioteca completa para sensor <a class="el" href="classVL53L0X.html" title="Classe que encapsula a comunicação e configuração do sensor VL53L0X.">VL53L0X</a></li>
+<li>Suporte a todas as funcionalidades do sensor</li>
+<li>Configuração avançada de parâmetros</li>
+</ul>
+<p><b>Principais métodos:</b> </p><div class="fragment"><div class="line">sensor.init()                           <span class="comment">// Inicializa sensor</span></div>
+<div class="line">sensor.readRangeSingleMillimeters()     <span class="comment">// Lê distância (mm)</span></div>
+<div class="line">sensor.setMeasurementTimingBudget(us)   <span class="comment">// Define precisão</span></div>
+<div class="line">sensor.setSignalRateLimit(rate)         <span class="comment">// Define alcance</span></div>
+<div class="line">sensor.setTimeout(ms)                   <span class="comment">// Define timeout</span></div>
+<div class="line">sensor.timeoutOccurred()                <span class="comment">// Verifica timeout</span></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
+Funcionalidades Implementadas</h1>
+<h2><a class="anchor" id="autotoc_md8"></a>
+Configurações do Sensor</h2>
+<ul>
+<li><b>Timing Budget</b>: 50ms (configurável) para melhor precisão</li>
+<li><b>Signal Rate Limit</b>: 0.1 MCPS para maior alcance</li>
+<li><b>Timeout</b>: 500ms para operações I2C</li>
+<li><b>Frequência I2C</b>: 400kHz para comunicação rápida</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Recursos Avançados</h2>
+<ul>
+<li>Detecção automática do sensor</li>
+<li>Verificação de timeout em operações</li>
+<li>Configuração otimizada para precisão vs velocidade</li>
+<li>Tratamento de erros robusto</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md10"></a>
+Como Compilar</h1>
+<h2><a class="anchor" id="autotoc_md11"></a>
+Pré-requisitos</h2>
+<ul>
+<li>Raspberry Pi Pico SDK 2.1.0</li>
+<li>CMake 3.13+</li>
+<li>Compilador ARM GCC</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md12"></a>
+Passos de Compilação</h2>
+<ol type="1">
+<li><b>Preparar ambiente</b>: <div class="fragment"><div class="line">cd VL53L0X-RP2040-RP2350</div>
+<div class="line">mkdir -p build</div>
+<div class="line">cd build</div>
+</div><!-- fragment --></li>
+<li><b>Configurar CMake</b>: <div class="fragment"><div class="line">cmake ..</div>
+</div><!-- fragment --></li>
+<li><b>Compilar</b>: <div class="fragment"><div class="line">cmake --build . --parallel 4</div>
+</div><!-- fragment --></li>
+<li><b>Resultado</b>: O arquivo <code>rp2040_vl53l0x.uf2</code> será gerado na pasta <code>build/</code></li>
+</ol>
+<h1><a class="anchor" id="autotoc_md13"></a>
+Como Usar</h1>
+<h2><a class="anchor" id="autotoc_md14"></a>
+Upload do Firmware</h2>
+<ol type="1">
+<li>Conecte o Pico ao computador segurando o botão BOOTSEL</li>
+<li>Copie o arquivo <code>rp2040_vl53l0x.uf2</code> para o drive RPI-RP2</li>
+<li>O Pico reiniciará automaticamente</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md15"></a>
+Monitoramento Serial</h2>
+<ul>
+<li>Conecte via USB</li>
+<li>Configure terminal serial (115200 baud)</li>
+<li>Observe as leituras de distância em tempo real</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md16"></a>
+Exemplo de Saída</h2>
+<div class="fragment"><div class="line">Waiting for USB connection...</div>
+<div class="line">USB connected!</div>
+<div class="line">VL53L0X Distance Sensor Example (Using Libraries)</div>
+<div class="line">Initializing VL53L0X sensor...</div>
+<div class="line">VL53L0X sensor initialized successfully!</div>
+<div class="line">Sensor configuration complete. Starting measurements...</div>
+<div class="line">Range readings (mm):</div>
+<div class="line">Range: 245 mm</div>
+<div class="line">Range: 247 mm</div>
+<div class="line">Range: 250 mm</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md17"></a>
+Especificações Técnicas</h1>
+<h2><a class="anchor" id="autotoc_md18"></a>
+Sensor VL53L0X</h2>
+<ul>
+<li><b>Alcance</b>: 30mm a 2000mm</li>
+<li><b>Precisão</b>: ±3% (típica)</li>
+<li><b>Tempo de medição</b>: 20ms a 300ms (configurável)</li>
+<li><b>Interface</b>: I2C (endereço padrão: 0x29)</li>
+<li><b>Alimentação</b>: 2.8V a 3.3V</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md19"></a>
+Performance</h2>
+<ul>
+<li><b>Taxa de amostragem</b>: ~2 Hz (com configurações atuais)</li>
+<li><b>Consumo</b>: ~19mA durante medição</li>
+<li><b>Resolução</b>: 1mm</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md20"></a>
+Troubleshooting</h1>
+<h2><a class="anchor" id="autotoc_md21"></a>
+Problemas Comuns</h2>
+<ol type="1">
+<li><b>Sensor não detectado</b>:<ul>
+<li>Verifique conexões I2C</li>
+<li>Confirme alimentação 3.3V</li>
+<li>Teste continuidade dos fios</li>
+</ul>
+</li>
+<li><b>Leituras inconsistentes</b>:<ul>
+<li>Verifique se há interferência luminosa</li>
+<li>Ajuste timing budget</li>
+<li>Verifique superfície do alvo</li>
+</ul>
+</li>
+<li><b>Timeouts frequentes</b>:<ul>
+<li>Aumente valor de timeout</li>
+<li>Verifique qualidade das conexões</li>
+<li>Reduza frequência I2C se necessário</li>
+</ul>
+</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md22"></a>
+Debug</h2>
+<ul>
+<li>Use <code>printf()</code> para debug adicional</li>
+<li>Monitor serial mostra status detalhado</li>
+<li>LEDs do Pico indicam atividade</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md23"></a>
+Melhorias Futuras</h1>
+<ul>
+<li>[ ] Suporte a múltiplos sensores</li>
+<li>[ ] Interface web para configuração</li>
+<li>[ ] Logging de dados em flash</li>
+<li>[ ] Modo de baixo consumo</li>
+<li>[ ] Calibração automática</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md24"></a>
+Licença</h1>
+<p>Este projeto utiliza bibliotecas com diferentes licenças:</p><ul>
+<li><a class="el" href="classVL53L0X.html" title="Classe que encapsula a comunicação e configuração do sensor VL53L0X.">VL53L0X</a> Library: Baseada em código ST Microelectronics</li>
+<li>I2C: Implementação própria para este projeto</li>
+<li>Pico SDK: BSD 3-Clause License</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md25"></a>
+Autor</h1>
+<p>Carlos Delfino <a href="#" onclick="location.href='mai'+'lto:'+'con'+'su'+'lto'+'ri'+'a@c'+'ar'+'los'+'de'+'lfi'+'fn'+'o.e'+'ti'+'.br'; return false;">consu<span class="obfuscator">.nosp@m.</span>ltor<span class="obfuscator">.nosp@m.</span>ia@ca<span class="obfuscator">.nosp@m.</span>rlos<span class="obfuscator">.nosp@m.</span>delfi<span class="obfuscator">.nosp@m.</span>fno.<span class="obfuscator">.nosp@m.</span>eti.b<span class="obfuscator">.nosp@m.</span>r</a></p>
+<p>Projeto refatorado para usar bibliotecas de alto nível, mantendo compatibilidade com Arduino e otimização para Pico SDK. </p>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

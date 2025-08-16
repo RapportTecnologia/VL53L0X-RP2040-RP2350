@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RP2040 VL53L0X: Código-Fonte de pico_sdk_stubs.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">RP2040 VL53L0X
+   </div>
+   <div id="projectbrief">Sensor VL53L0X para RP2040 (Pico/Pico W)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('pico__sdk__stubs_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">pico_sdk_stubs.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pico__sdk__stubs_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef PICO_SDK_STUBS_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define PICO_SDK_STUBS_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// Define uint for compatibility, as it&#39;s used in the original headers</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="pico__sdk__stubs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">    9</a></span><span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_typedef" href="pico__sdk__stubs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// Mock para a estrutura i2c_inst_t</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">struct </span>i2c_inst_t;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="pico__sdk__stubs_8h.html#a9f2660265bb7f68a0813f59928c545f4">   13</a></span><span class="preprocessor">#define i2c_default (reinterpret_cast&lt;i2c_inst_t*&gt;(0))</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// Enum para funções GPIO (simplificado)</span></div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="pico__sdk__stubs_8h.html#a2af81373f9f5764ac1a5bd6097477530">   16</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="pico__sdk__stubs_8h.html#a2af81373f9f5764ac1a5bd6097477530">gpio_function</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="pico__sdk__stubs_8h.html#a2af81373f9f5764ac1a5bd6097477530af5897687741f0ee34c88fd9823f1450a">   17</a></span>    <a class="code hl_enumvalue" href="pico__sdk__stubs_8h.html#a2af81373f9f5764ac1a5bd6097477530af5897687741f0ee34c88fd9823f1450a">GPIO_FUNC_I2C</a>,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_enumvalue" href="pico__sdk__stubs_8h.html#a2af81373f9f5764ac1a5bd6097477530a3ec115257e1f1747abf60284362c5a04">GPIO_FUNC_NULL</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="pico__sdk__stubs_8h.html#a2af81373f9f5764ac1a5bd6097477530a3ec115257e1f1747abf60284362c5a04">   19</a></span>};</div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// Erros Pico (simplificado)</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="pico__sdk__stubs_8h.html#a3712a0d8c03c293afc5ec9067bde07b2">   22</a></span><span class="preprocessor">#define PICO_ERROR_GENERIC -1</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// Estrutura para mock do I2C</span></div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structI2CMock.html">   25</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structI2CMock.html">I2CMock</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structI2CMock.html#ab5e340b358021f5e44f7cefbec367d98">   26</a></span>    std::map&lt;uint8_t, uint8_t&gt; <a class="code hl_variable" href="structI2CMock.html#ab5e340b358021f5e44f7cefbec367d98">registers</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structI2CMock.html#a6025fc466dd6afa7e61c51278492da18">   27</a></span>    uint8_t <a class="code hl_variable" href="structI2CMock.html#a6025fc466dd6afa7e61c51278492da18">last_addr</a> = 0;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structI2CMock.html#a24b8896dc4a7f0ac6d3869697ffed97b">   28</a></span>    uint8_t <a class="code hl_variable" href="structI2CMock.html#a24b8896dc4a7f0ac6d3869697ffed97b">last_reg_addr</a> = 0;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">extern</span> <a class="code hl_struct" href="structI2CMock.html">I2CMock</a> <a class="code hl_variable" href="pico__sdk__stubs_8h.html#a34ee7f2ceb27656d983fced07563be55">i2c_mock</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// Declarações de stubs para funções do SDK do Pico</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// hardware_i2c</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="pico__sdk__stubs_8h.html#a80a0c402347bc0b48b5e130ec032091c">i2c_init</a>(i2c_inst_t *i2c, <a class="code hl_typedef" href="pico__sdk__stubs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> baudrate);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="pico__sdk__stubs_8h.html#a2e2ac8f345157b0095fc463ac3e584ba">i2c_deinit</a>(i2c_inst_t *i2c);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_typedef" href="pico__sdk__stubs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> <a class="code hl_function" href="pico__sdk__stubs_8h.html#a615525cad9398b3ec37e8208523c73b4">i2c_set_baudrate</a>(i2c_inst_t *i2c, <a class="code hl_typedef" href="pico__sdk__stubs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> baudrate);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="pico__sdk__stubs_8h.html#a5149e9af84926fa19db6677691ab2900">i2c_write_blocking</a>(i2c_inst_t *i2c, uint8_t addr, <span class="keyword">const</span> uint8_t *src, <span class="keywordtype">size_t</span> len, <span class="keywordtype">bool</span> nostop);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="pico__sdk__stubs_8h.html#aba4ea440285edec58eba507308c568c6">i2c_read_blocking</a>(i2c_inst_t *i2c, uint8_t addr, uint8_t *dst, <span class="keywordtype">size_t</span> len, <span class="keywordtype">bool</span> nostop);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">// hardware_gpio</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="pico__sdk__stubs_8h.html#a28125be5146cca1eb28a76aa3592af74">gpio_set_function</a>(<a class="code hl_typedef" href="pico__sdk__stubs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> gpio, <a class="code hl_enumeration" href="pico__sdk__stubs_8h.html#a2af81373f9f5764ac1a5bd6097477530">gpio_function</a> fn);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="pico__sdk__stubs_8h.html#ac85d485c2235db026a1b7e491454c369">gpio_pull_up</a>(<a class="code hl_typedef" href="pico__sdk__stubs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> gpio);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="pico__sdk__stubs_8h.html#a0362a6575fd0eb8a4811e3f49edb0fce">gpio_init</a>(<a class="code hl_typedef" href="pico__sdk__stubs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> pin);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="pico__sdk__stubs_8h.html#a12bbbbb167d28c82edf06a5a1f96caf3">gpio_set_dir</a>(<a class="code hl_typedef" href="pico__sdk__stubs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> pin, <span class="keywordtype">bool</span> out);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="pico__sdk__stubs_8h.html#aa9323775e480e4765b320ebfd4949fd0">gpio_put</a>(<a class="code hl_typedef" href="pico__sdk__stubs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> pin, <span class="keywordtype">bool</span> value);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_enumeration" href="pico__sdk__stubs_8h.html#a2af81373f9f5764ac1a5bd6097477530">gpio_function</a> <a class="code hl_function" href="pico__sdk__stubs_8h.html#af0b473d23abc9a7d1b950c8ab94df69b">gpio_get_function</a>(<a class="code hl_typedef" href="pico__sdk__stubs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> gpio);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// pico_time</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    uint64_t <a class="code hl_function" href="pico__sdk__stubs_8h.html#ade89cc2e64c8f20d2a18c288b900be08">time_us_64</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="pico__sdk__stubs_8h.html#ae617a6842d4f3a192064c4354b88fcff">sleep_ms</a>(uint32_t ms);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="pico__sdk__stubs_8h.html#afd2047ec52f48f0e893289f03ec5bf5e">   53</a></span>    <span class="keyword">typedef</span> uint64_t <a class="code hl_typedef" href="pico__sdk__stubs_8h.html#afd2047ec52f48f0e893289f03ec5bf5e">absolute_time_t</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_typedef" href="pico__sdk__stubs_8h.html#afd2047ec52f48f0e893289f03ec5bf5e">absolute_time_t</a> <a class="code hl_function" href="pico__sdk__stubs_8h.html#a3148c2194da0af9c04af97336818edf8">get_absolute_time</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    uint64_t <a class="code hl_function" href="pico__sdk__stubs_8h.html#ac1fefb71a616b487809284b5329c021b">to_ms_since_boot</a>(<a class="code hl_typedef" href="pico__sdk__stubs_8h.html#afd2047ec52f48f0e893289f03ec5bf5e">absolute_time_t</a> t);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">// Funções auxiliares para controle do mock no teste</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span> <a class="code hl_function" href="pico__sdk__stubs_8h.html#ad4eb026a5fa0fa8e82633e34cc4f6194">reset_mock_i2c</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>uint64_t <a class="code hl_function" href="pico__sdk__stubs_8h.html#a738684e615df3e1e76d4567f6b2f91ad">get_mock_time_us</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">void</span> <a class="code hl_function" href="pico__sdk__stubs_8h.html#acde64a975f61bfe0afd4cf7655ca1fe9">advance_mock_time_us</a>(uint64_t us);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><a class="code hl_enumeration" href="pico__sdk__stubs_8h.html#a2af81373f9f5764ac1a5bd6097477530">gpio_function</a> <a class="code hl_function" href="pico__sdk__stubs_8h.html#af0b473d23abc9a7d1b950c8ab94df69b">gpio_get_function</a>(<a class="code hl_typedef" href="pico__sdk__stubs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> gpio);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif </span><span class="comment">// PICO_SDK_STUBS_H</span></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_a0362a6575fd0eb8a4811e3f49edb0fce"><div class="ttname"><a href="pico__sdk__stubs_8h.html#a0362a6575fd0eb8a4811e3f49edb0fce">gpio_init</a></div><div class="ttdeci">void gpio_init(uint pin)</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:78</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_a12bbbbb167d28c82edf06a5a1f96caf3"><div class="ttname"><a href="pico__sdk__stubs_8h.html#a12bbbbb167d28c82edf06a5a1f96caf3">gpio_set_dir</a></div><div class="ttdeci">void gpio_set_dir(uint pin, bool out)</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:79</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_a28125be5146cca1eb28a76aa3592af74"><div class="ttname"><a href="pico__sdk__stubs_8h.html#a28125be5146cca1eb28a76aa3592af74">gpio_set_function</a></div><div class="ttdeci">void gpio_set_function(uint gpio, gpio_function fn)</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:18</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_a2af81373f9f5764ac1a5bd6097477530"><div class="ttname"><a href="pico__sdk__stubs_8h.html#a2af81373f9f5764ac1a5bd6097477530">gpio_function</a></div><div class="ttdeci">gpio_function</div><div class="ttdef"><b>Definição</b> pico_sdk_stubs.h:16</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_a2af81373f9f5764ac1a5bd6097477530a3ec115257e1f1747abf60284362c5a04"><div class="ttname"><a href="pico__sdk__stubs_8h.html#a2af81373f9f5764ac1a5bd6097477530a3ec115257e1f1747abf60284362c5a04">GPIO_FUNC_NULL</a></div><div class="ttdeci">@ GPIO_FUNC_NULL</div><div class="ttdef"><b>Definição</b> pico_sdk_stubs.h:18</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_a2af81373f9f5764ac1a5bd6097477530af5897687741f0ee34c88fd9823f1450a"><div class="ttname"><a href="pico__sdk__stubs_8h.html#a2af81373f9f5764ac1a5bd6097477530af5897687741f0ee34c88fd9823f1450a">GPIO_FUNC_I2C</a></div><div class="ttdeci">@ GPIO_FUNC_I2C</div><div class="ttdef"><b>Definição</b> pico_sdk_stubs.h:17</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_a2e2ac8f345157b0095fc463ac3e584ba"><div class="ttname"><a href="pico__sdk__stubs_8h.html#a2e2ac8f345157b0095fc463ac3e584ba">i2c_deinit</a></div><div class="ttdeci">void i2c_deinit(i2c_inst_t *i2c)</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:12</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_a3148c2194da0af9c04af97336818edf8"><div class="ttname"><a href="pico__sdk__stubs_8h.html#a3148c2194da0af9c04af97336818edf8">get_absolute_time</a></div><div class="ttdeci">absolute_time_t get_absolute_time()</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:69</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_a34ee7f2ceb27656d983fced07563be55"><div class="ttname"><a href="pico__sdk__stubs_8h.html#a34ee7f2ceb27656d983fced07563be55">i2c_mock</a></div><div class="ttdeci">I2CMock i2c_mock</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:5</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_a5149e9af84926fa19db6677691ab2900"><div class="ttname"><a href="pico__sdk__stubs_8h.html#a5149e9af84926fa19db6677691ab2900">i2c_write_blocking</a></div><div class="ttdeci">int i2c_write_blocking(i2c_inst_t *i2c, uint8_t addr, const uint8_t *src, size_t len, bool nostop)</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:21</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_a615525cad9398b3ec37e8208523c73b4"><div class="ttname"><a href="pico__sdk__stubs_8h.html#a615525cad9398b3ec37e8208523c73b4">i2c_set_baudrate</a></div><div class="ttdeci">uint i2c_set_baudrate(i2c_inst_t *i2c, uint baudrate)</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:14</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_a738684e615df3e1e76d4567f6b2f91ad"><div class="ttname"><a href="pico__sdk__stubs_8h.html#a738684e615df3e1e76d4567f6b2f91ad">get_mock_time_us</a></div><div class="ttdeci">uint64_t get_mock_time_us()</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:96</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_a80a0c402347bc0b48b5e130ec032091c"><div class="ttname"><a href="pico__sdk__stubs_8h.html#a80a0c402347bc0b48b5e130ec032091c">i2c_init</a></div><div class="ttdeci">void i2c_init(i2c_inst_t *i2c, uint baudrate)</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:11</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_a91ad9478d81a7aaf2593e8d9c3d06a14"><div class="ttname"><a href="pico__sdk__stubs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definição</b> pico_sdk_stubs.h:9</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_aa9323775e480e4765b320ebfd4949fd0"><div class="ttname"><a href="pico__sdk__stubs_8h.html#aa9323775e480e4765b320ebfd4949fd0">gpio_put</a></div><div class="ttdeci">void gpio_put(uint pin, bool value)</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:80</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_aba4ea440285edec58eba507308c568c6"><div class="ttname"><a href="pico__sdk__stubs_8h.html#aba4ea440285edec58eba507308c568c6">i2c_read_blocking</a></div><div class="ttdeci">int i2c_read_blocking(i2c_inst_t *i2c, uint8_t addr, uint8_t *dst, size_t len, bool nostop)</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:45</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_ac1fefb71a616b487809284b5329c021b"><div class="ttname"><a href="pico__sdk__stubs_8h.html#ac1fefb71a616b487809284b5329c021b">to_ms_since_boot</a></div><div class="ttdeci">uint64_t to_ms_since_boot(absolute_time_t t)</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:73</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_ac85d485c2235db026a1b7e491454c369"><div class="ttname"><a href="pico__sdk__stubs_8h.html#ac85d485c2235db026a1b7e491454c369">gpio_pull_up</a></div><div class="ttdeci">void gpio_pull_up(uint gpio)</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:19</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_acde64a975f61bfe0afd4cf7655ca1fe9"><div class="ttname"><a href="pico__sdk__stubs_8h.html#acde64a975f61bfe0afd4cf7655ca1fe9">advance_mock_time_us</a></div><div class="ttdeci">void advance_mock_time_us(uint64_t us)</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:102</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_ad4eb026a5fa0fa8e82633e34cc4f6194"><div class="ttname"><a href="pico__sdk__stubs_8h.html#ad4eb026a5fa0fa8e82633e34cc4f6194">reset_mock_i2c</a></div><div class="ttdeci">void reset_mock_i2c()</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:90</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_ade89cc2e64c8f20d2a18c288b900be08"><div class="ttname"><a href="pico__sdk__stubs_8h.html#ade89cc2e64c8f20d2a18c288b900be08">time_us_64</a></div><div class="ttdeci">uint64_t time_us_64()</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:61</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_ae617a6842d4f3a192064c4354b88fcff"><div class="ttname"><a href="pico__sdk__stubs_8h.html#ae617a6842d4f3a192064c4354b88fcff">sleep_ms</a></div><div class="ttdeci">void sleep_ms(uint32_t ms)</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:65</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_af0b473d23abc9a7d1b950c8ab94df69b"><div class="ttname"><a href="pico__sdk__stubs_8h.html#af0b473d23abc9a7d1b950c8ab94df69b">gpio_get_function</a></div><div class="ttdeci">gpio_function gpio_get_function(uint gpio)</div><div class="ttdef"><b>Definição</b> pico_sdk_mocks.cpp:82</div></div>
+<div class="ttc" id="apico__sdk__stubs_8h_html_afd2047ec52f48f0e893289f03ec5bf5e"><div class="ttname"><a href="pico__sdk__stubs_8h.html#afd2047ec52f48f0e893289f03ec5bf5e">absolute_time_t</a></div><div class="ttdeci">uint64_t absolute_time_t</div><div class="ttdef"><b>Definição</b> pico_sdk_stubs.h:53</div></div>
+<div class="ttc" id="astructI2CMock_html"><div class="ttname"><a href="structI2CMock.html">I2CMock</a></div><div class="ttdef"><b>Definição</b> pico_sdk_stubs.h:25</div></div>
+<div class="ttc" id="astructI2CMock_html_a24b8896dc4a7f0ac6d3869697ffed97b"><div class="ttname"><a href="structI2CMock.html#a24b8896dc4a7f0ac6d3869697ffed97b">I2CMock::last_reg_addr</a></div><div class="ttdeci">uint8_t last_reg_addr</div><div class="ttdef"><b>Definição</b> pico_sdk_stubs.h:28</div></div>
+<div class="ttc" id="astructI2CMock_html_a6025fc466dd6afa7e61c51278492da18"><div class="ttname"><a href="structI2CMock.html#a6025fc466dd6afa7e61c51278492da18">I2CMock::last_addr</a></div><div class="ttdeci">uint8_t last_addr</div><div class="ttdef"><b>Definição</b> pico_sdk_stubs.h:27</div></div>
+<div class="ttc" id="astructI2CMock_html_ab5e340b358021f5e44f7cefbec367d98"><div class="ttname"><a href="structI2CMock.html#ab5e340b358021f5e44f7cefbec367d98">I2CMock::registers</a></div><div class="ttdeci">std::map&lt; uint8_t, uint8_t &gt; registers</div><div class="ttdef"><b>Definição</b> pico_sdk_stubs.h:26</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_13e138d54eb8818da29c3992edef070a.html">test</a></li><li class="navelem"><a class="el" href="pico__sdk__stubs_8h.html">pico_sdk_stubs.h</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

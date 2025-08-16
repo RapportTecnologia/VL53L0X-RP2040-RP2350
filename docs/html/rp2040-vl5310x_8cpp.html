@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RP2040 VL53L0X: Referência ao ficheiro rp2040-vl5310x.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">RP2040 VL53L0X
+   </div>
+   <div id="projectbrief">Sensor VL53L0X para RP2040 (Pico/Pico W)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('rp2040-vl5310x_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle"><div class="title">Referência ao ficheiro rp2040-vl5310x.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Exemplo de uso do sensor <a class="el" href="classVL53L0X.html" title="Classe que encapsula a comunicação e configuração do sensor VL53L0X.">VL53L0X</a> no RP2040 (Pico/Pico W).  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="stdlib_8h_source.html">pico/stdlib.h</a>&quot;</code><br />
+<code>#include &quot;pico/binary_info.h&quot;</code><br />
+<code>#include &quot;I2C/I2C.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="VL53L0X_8h_source.html">vl53l0x/VL53L0X.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Diagrama de dependências de inclusão para rp2040-vl5310x.cpp:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="rp2040-vl5310x_8cpp__incl.svg" width="507" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a0e4e08bab2fb484136d18b067bef372c" id="r_a0e4e08bab2fb484136d18b067bef372c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rp2040-vl5310x_8cpp.html#a0e4e08bab2fb484136d18b067bef372c">I2C_SCL_PIN</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:a0e4e08bab2fb484136d18b067bef372c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cade698267beb86ccaa38c14d35ab0f" id="r_a2cade698267beb86ccaa38c14d35ab0f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rp2040-vl5310x_8cpp.html#a2cade698267beb86ccaa38c14d35ab0f">I2C_SDA_PIN</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a2cade698267beb86ccaa38c14d35ab0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rp2040-vl5310x_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função principal: inicializa comunicação, configura <a class="el" href="classVL53L0X.html" title="Classe que encapsula a comunicação e configuração do sensor VL53L0X.">VL53L0X</a> e exibe leituras.  <br /></td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Exemplo de uso do sensor <a class="el" href="classVL53L0X.html" title="Classe que encapsula a comunicação e configuração do sensor VL53L0X.">VL53L0X</a> no RP2040 (Pico/Pico W). </p>
+<p>Demonstra inicialização do I2C, configuração do sensor e leituras periódicas de distância em milímetros via USB/serial. </p>
+</div><h2 class="groupheader">Documentação das macros</h2>
+<a id="a0e4e08bab2fb484136d18b067bef372c" name="a0e4e08bab2fb484136d18b067bef372c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e4e08bab2fb484136d18b067bef372c">&#9670;&#160;</a></span>I2C_SCL_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SCL_PIN&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2cade698267beb86ccaa38c14d35ab0f" name="a2cade698267beb86ccaa38c14d35ab0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cade698267beb86ccaa38c14d35ab0f">&#9670;&#160;</a></span>I2C_SDA_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_SDA_PIN&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentação das funções</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função principal: inicializa comunicação, configura <a class="el" href="classVL53L0X.html" title="Classe que encapsula a comunicação e configuração do sensor VL53L0X.">VL53L0X</a> e exibe leituras. </p>
+
+<p class="reference">Referências <a class="el" href="pico__sdk__stubs_8h.html#a2af81373f9f5764ac1a5bd6097477530af5897687741f0ee34c88fd9823f1450a">GPIO_FUNC_I2C</a>, <a class="el" href="rp2040-vl5310x_8cpp.html#a0e4e08bab2fb484136d18b067bef372c">I2C_SCL_PIN</a>, <a class="el" href="rp2040-vl5310x_8cpp.html#a2cade698267beb86ccaa38c14d35ab0f">I2C_SDA_PIN</a>, <a class="el" href="classVL53L0X.html#a2bd7f966631ee954fd1c4119f901b240">VL53L0X::init()</a>, <a class="el" href="classVL53L0X.html#ab4a4ab20cde669bee54a7e6efcc93cc1">VL53L0X::readRangeSingleMillimeters()</a>, <a class="el" href="classVL53L0X.html#a23776f94480a1fad72f18cefb64a2829">VL53L0X::setBus()</a>, <a class="el" href="classVL53L0X.html#a74e836308c2062c7871a37fe11c026ca">VL53L0X::setMeasurementTimingBudget()</a>, <a class="el" href="classVL53L0X.html#a32ea0f8c88d634abcf36850ced40e9eb">VL53L0X::setSignalRateLimit()</a>, <a class="el" href="classVL53L0X.html#a421ae3c8aaad208e7e8c07c6f88cf486">VL53L0X::setTimeout()</a>, <a class="el" href="pico__sdk__mocks_8cpp.html#ae617a6842d4f3a192064c4354b88fcff">sleep_ms()</a> e <a class="el" href="classVL53L0X.html#af0c5780fbd61d21008efc63dfd958ab4">VL53L0X::timeoutOccurred()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="rp2040-vl5310x_8cpp.html">rp2040-vl5310x.cpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>
