@@ -1,3 +1,12 @@
+/**
+ * \file VL53L0X.cpp
+ * \brief Implementação da classe VL53L0X para RP2040.
+ *
+ * A maior parte da funcionalidade desta biblioteca é baseada na API do VL53L0X
+ * fornecida pela ST (STSW-IMG005). Alguns comentários explicativos foram
+ * adaptados do código-fonte da API, do manual do usuário (UM2039) e do
+ * datasheet do VL53L0X.
+ */
 // Most of the functionality of this library is based on the VL53L0X API
 // provided by ST (STSW-IMG005), and some of the explanatory comments are quoted
 // or paraphrased from the API source code, API user manual (UM2039), and the

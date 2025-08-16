@@ -1,8 +1,37 @@
 #ifndef VL53L0X_h
 #define VL53L0X_h
 
-#include "../I2C/I2C.h"
+/**
+ * \file VL53L0X.h
+ * \brief Interface C++ para o sensor de distância VL53L0X (Time-of-Flight) no RP2040.
+ *
+ * Esta classe provê uma API de alto nível para inicialização, configuração e
+ * leitura de distância do sensor VL53L0X através do barramento I2C. O
+ * objetivo é facilitar a integração em aplicações RP2040 (Raspberry Pi Pico/Pico W)
+ * mantendo compatibilidade com padrões comuns.
+ *
+ * \author Carlos Delfino
+ */
 
+#include <cstdint>
+
+// Forward declaration para evitar dependência direta do header I2C aqui
+class I2C;
+/**
+ * \class VL53L0X
+ * \brief Classe que encapsula a comunicação e configuração do sensor VL53L0X.
+ *
+ * Exemplo típico de uso:
+ * \code{.cpp}
+ * I2C i2c;
+ * i2c.begin();
+ * VL53L0X sensor;
+ * sensor.setBus(&i2c);
+ * if (sensor.init()) {
+ *   uint16_t mm = sensor.readRangeSingleMillimeters();
+ * }
+ * \endcode
+ */
 class VL53L0X
 {
   public:
@@ -96,42 +125,107 @@ class VL53L0X
 
     uint8_t last_status; // status of last I2C transmission
 
+    /**
+     * \brief Construtor padrão. Não inicializa o hardware.
+     *
+     * Após construir, chame `setBus()` para definir o barramento I2C e
+     * `init()` para inicializar o sensor.
+     */
     VL53L0X();
 
+    /** \brief Define o barramento I2C a ser utilizado pela instância. */
     void setBus(I2C * bus) { this->bus = bus; }
+    /** \brief Retorna o ponteiro para o barramento I2C associado. */
     I2C * getBus() { return bus; }
 
+    /**
+     * \brief Altera o endereço I2C do sensor.
+     * \param new_addr Novo endereço de 7 bits (0x08..0x77).
+     */
     void setAddress(uint8_t new_addr);
+    /** \brief Obtém o endereço I2C atual do sensor. */
     inline uint8_t getAddress() { return address; }
 
+    /**
+     * \brief Inicializa o sensor e executa a calibração básica.
+     * \param io_2v8 Se verdadeiro, configura I/O em 2.8V (padrão). Caso falso, mantém 1.8V.
+     * \return `true` em caso de sucesso; `false` se a inicialização falhar.
+     */
     bool init(bool io_2v8 = true);
 
+    /** \brief Escreve um registrador de 8 bits. */
     void writeReg(uint8_t reg, uint8_t value);
+    /** \brief Escreve um registrador de 16 bits (big-endian). */
     void writeReg16Bit(uint8_t reg, uint16_t value);
+    /** \brief Escreve um registrador de 32 bits (big-endian). */
     void writeReg32Bit(uint8_t reg, uint32_t value);
+    /** \brief Lê um registrador de 8 bits. */
     uint8_t readReg(uint8_t reg);
+    /** \brief Lê um registrador de 16 bits (big-endian). */
     uint16_t readReg16Bit(uint8_t reg);
+    /** \brief Lê um registrador de 32 bits (big-endian). */
     uint32_t readReg32Bit(uint8_t reg);
 
+    /**
+     * \brief Escreve múltiplos bytes iniciando em um registrador.
+     * \param reg Registrador inicial.
+     * \param src Ponteiro para o buffer de origem.
+     * \param count Quantidade de bytes.
+     */
     void writeMulti(uint8_t reg, uint8_t const * src, uint8_t count);
+    /**
+     * \brief Lê múltiplos bytes a partir de um registrador.
+     * \param reg Registrador inicial.
+     * \param dst Ponteiro para o buffer de destino.
+     * \param count Quantidade de bytes a ler.
+     */
     void readMulti(uint8_t reg, uint8_t * dst, uint8_t count);
 
+    /**
+     * \brief Define o limite mínimo de taxa de sinal (MCPS).
+     * \param limit_Mcps Valor em Mega Counts Per Second (0..511.99).
+     * \return `true` em caso de sucesso.
+     */
     bool setSignalRateLimit(float limit_Mcps);
+    /** \brief Obtém o limite mínimo de taxa de sinal (MCPS). */
     float getSignalRateLimit();
 
+    /**
+     * \brief Define o orçamento de tempo de medição (µs).
+     * \param budget_us Tempo total destinado a uma medição.
+     * \return `true` se aplicado com sucesso.
+     */
     bool setMeasurementTimingBudget(uint32_t budget_us);
+    /** \brief Retorna o orçamento de tempo de medição atual (µs). */
     uint32_t getMeasurementTimingBudget();
 
+    /**
+     * \brief Configura o período do pulso VCSEL (em PCLKs).
+     * \param type Tipo do período (pré-range ou final-range).
+     * \param period_pclks Valor par válido (ver datasheet).
+     * \return `true` em caso de sucesso.
+     */
     bool setVcselPulsePeriod(vcselPeriodType type, uint8_t period_pclks);
+    /** \brief Retorna o período do pulso VCSEL (em PCLKs). */
     uint8_t getVcselPulsePeriod(vcselPeriodType type);
 
+    /**
+     * \brief Inicia medições contínuas.
+     * \param period_ms Período entre medições (ms). Se 0, mede continuamente.
+     */
     void startContinuous(uint32_t period_ms = 0);
+    /** \brief Interrompe medições contínuas. */
     void stopContinuous();
+    /** \brief Lê distância (mm) quando em modo contínuo. */
     uint16_t readRangeContinuousMillimeters();
+    /** \brief Realiza uma única leitura de distância (mm). */
     uint16_t readRangeSingleMillimeters();
 
+    /** \brief Define o tempo limite (ms) para operações I2C. */
     inline void setTimeout(uint16_t timeout) { io_timeout = timeout; }
+    /** \brief Retorna o tempo limite (ms) configurado. */
     inline uint16_t getTimeout() { return io_timeout; }
+    /** \brief Indica se ocorreu timeout desde a última verificação. */
     bool timeoutOccurred();
 
   private:

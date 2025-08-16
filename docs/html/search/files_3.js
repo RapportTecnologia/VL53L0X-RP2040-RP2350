@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['readme_2emd_0',['README.md',['../README_8md.html',1,'']]],
-  ['rp2040_2dvl5310x_2ecpp_1',['rp2040-vl5310x.cpp',['../rp2040-vl5310x_8cpp.html',1,'']]]
+  ['pico_5fsdk_5fmocks_2ecpp_0',['pico_sdk_mocks.cpp',['../pico__sdk__mocks_8cpp.html',1,'']]],
+  ['pico_5fsdk_5fstubs_2eh_1',['pico_sdk_stubs.h',['../pico__sdk__stubs_8h.html',1,'']]]
 ];
