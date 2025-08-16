@@ -48,7 +48,7 @@ if(BUILD_FOR_PICO)
 
     add_executable(rp2040_vl53l0x
             main.cpp
-            ../I2C/I2C.cpp
+            ../I2C-RP2040-RP2350/I2C.cpp
             vl53l0x/VL53L0X.cpp
             )
 
@@ -82,7 +82,7 @@ else()
         test/test_main.cpp
         test/unity/unity.c
         test/pico_sdk_mocks.cpp # Mock implementations
-        ../I2C/I2C.cpp
+        ../I2C-RP2040-RP2350/I2C.cpp
         vl53l0x/VL53L0X.cpp
     )
 
@@ -90,7 +90,7 @@ else()
         ${CMAKE_CURRENT_SOURCE_DIR}/test/unity
         ${CMAKE_CURRENT_SOURCE_DIR}/test
         ${CMAKE_CURRENT_SOURCE_DIR}
-        ${CMAKE_CURRENT_SOURCE_DIR}/../I2C
+        ${CMAKE_CURRENT_SOURCE_DIR}/../I2C-RP2040-RP2350
         ${CMAKE_CURRENT_SOURCE_DIR}/vl53l0x
     )
 
