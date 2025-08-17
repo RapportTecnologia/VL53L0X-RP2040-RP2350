@@ -1,5 +1,21 @@
 # RP2040 VL53L0X Distance Sensor Project
 
+## Como obter este módulo (via workspace principal)
+
+Para garantir a estrutura de diretórios e dependências (ex.: `../I2C`, testes, mocks) conforme o monorepo, recomenda-se clonar o repositório raiz com submódulos:
+
+```bash
+git clone --recurse-submodules https://github.com/RapportTecnologia/Sensores_e_Atuadores_do_Kit_BitDogLab.git Sensores_e_Atuadores_do_KIT
+cd Sensores_e_Atuadores_do_KIT
+git submodule update --init --recursive
+```
+
+Atualizar submódulos (quando aplicável):
+
+```bash
+git submodule update --remote --merge --recursive
+```
+
 Este projeto implementa o firware para o sensor de distância VL53L0X usando o microcontrolador RP2040 (Raspberry Pi Pico ou Pico W) com bibliotecas de alto nível.
 
 ## Características
@@ -186,6 +202,16 @@ Range: 250 mm
 - [ ] Modo de baixo consumo
 - [ ] Calibração automática
 
+## Documentação
+
+Para gerar documentação local deste módulo (se houver `Doxyfile` configurado neste ou no monorepo), execute:
+
+```bash
+doxygen Doxyfile
+```
+
+A saída HTML ficará disponível em `docs/html/index.html` (ou conforme configuração).
+
 ## Licença
 
 Este projeto utiliza bibliotecas com diferentes licenças:
@@ -193,8 +219,8 @@ Este projeto utiliza bibliotecas com diferentes licenças:
 - I2C: Implementação própria para este projeto
 - Pico SDK: BSD 3-Clause License
 
-## Autor
+## Autores e Colaboradores
 
-Carlos Delfino <consultoria@carlosdelfifno.eti.br>
+- Carlos Delfino — consultoria@carlosdelfino.eti.br — GitHub: [@carlosdelfino](https://github.com/carlosdelfino)
 
 Projeto refatorado para usar bibliotecas de alto nível, mantendo compatibilidade com Arduino e otimização para Pico SDK.
