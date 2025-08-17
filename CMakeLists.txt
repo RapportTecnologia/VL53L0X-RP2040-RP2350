@@ -48,7 +48,7 @@ if(BUILD_FOR_PICO)
 
     add_executable(rp2040_vl53l0x
             main.cpp
-            ../I2C-RP2040-RP2350/I2C.cpp
+            ../I2C-proxy-RP2040-RP2350/I2C.cpp
             vl53l0x/VL53L0X.cpp
             )
 
@@ -61,7 +61,7 @@ if(BUILD_FOR_PICO)
     target_include_directories(rp2040_vl53l0x PRIVATE
         .
         vl53l0x
-        ${CMAKE_CURRENT_SOURCE_DIR}/../I2C-RP2040-RP2350
+        ${CMAKE_CURRENT_SOURCE_DIR}/../I2C-proxy-RP2040-RP2350
     )
 
     pico_enable_stdio_usb(rp2040_vl53l0x 1)
@@ -85,7 +85,7 @@ else()
     add_executable(run_tests
         test/test_main.cpp
         ../unity/src/unity.c
-        ../I2C-RP2040-RP2350/I2C.cpp
+        ../I2C-proxy-RP2040-RP2350/I2C.cpp
         vl53l0x/VL53L0X.cpp
     )
 
@@ -93,7 +93,7 @@ else()
         ${CMAKE_CURRENT_SOURCE_DIR}/../unity/src
         ${CMAKE_CURRENT_SOURCE_DIR}/test
         ${CMAKE_CURRENT_SOURCE_DIR}
-        ${CMAKE_CURRENT_SOURCE_DIR}/../I2C-RP2040-RP2350
+        ${CMAKE_CURRENT_SOURCE_DIR}/../I2C-proxy-RP2040-RP2350
         ${CMAKE_CURRENT_SOURCE_DIR}/vl53l0x
     )
 
